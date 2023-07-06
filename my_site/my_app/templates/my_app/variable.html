@@ -7,8 +7,8 @@
 <body>
     <h1>Variable HTML connected..</h1>
 
-    <h2>First name: {{ first_name }}</h2>
-    <h2>Last name: {{ last_name }}</h2>
+    <h2>First name: {{ first_name | title}}</h2>
+    <h2>Last name: {{ last_name | length}}</h2>
     <h2>{{ some_list }}</h2>
     <h2>First item in list: {{ some_list.0 }}</h2>
     <h2>{{ some_dict }}</h2>
