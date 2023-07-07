@@ -10,10 +10,16 @@
     <h2>First name: {{ first_name | title}}</h2>
     <h2>Last name: {{ last_name | length}}</h2>
     <h2>{{ some_list }}</h2>
+    <ul>
+    {% for item in some_list %}
+        <li><h3>{{item}}</h3></li>
+    {% endfor %}
+    </ul>
     <h2>First item in list: {{ some_list.0 }}</h2>
     <h2>{{ some_dict }}</h2>
     <h2>Inside value in dict: {{ some_dict.inside_key }}</h2>
     <h2>{# This is comment #}</h2>
+    
 
 </body>
 </html>
