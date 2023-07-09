@@ -6,15 +6,24 @@
 </head>
 <body>
     <h1>Variable HTML connected..</h1>
-
+    {% if user_logged_in %}
+        <h2>Welcome back, you are logged in!</h2>
+    {% endif %}
+    <ul>
+    {% for num in some_list %}
+        {% if num == 2 %}
+            <li> TWO </li>
+        {% else %}
+            <li> {{num}} </li>
+        {% endif %}
+        
+    {% endfor %}
+    </ul>
     <h2>First name: {{ first_name | title}}</h2>
     <h2>Last name: {{ last_name | length}}</h2>
     <h2>{{ some_list }}</h2>
-    <ul>
-    {% for item in some_list %}
-        <li><h3>{{item}}</h3></li>
-    {% endfor %}
-    </ul>
+
+
     <h2>First item in list: {{ some_list.0 }}</h2>
     <h2>{{ some_dict }}</h2>
     <h2>Inside value in dict: {{ some_dict.inside_key }}</h2>
